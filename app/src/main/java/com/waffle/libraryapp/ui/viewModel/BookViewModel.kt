@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class BookViewModel(application: Application): AndroidViewModel(application) {
-  private val repository: BookRepository
+  val repository: BookRepository
   val getBooks: LiveData<List<Book>>
 
   init {

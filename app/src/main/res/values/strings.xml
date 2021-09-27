@@ -6,4 +6,9 @@
     <string name="login_btn">Sign in</string>
     <string name="all_books_btn">All books</string>
     <string name="add_book_menu_btn">Add Book</string>
+    <string name="title_placeholder">Title</string>
+    <string name="description_placeholder">Description</string>
+    <string name="comment_placeholder">Comment</string>
+    <string name="rating_placeholder">Rating (from 1 to 5)</string>
+    <string name="save_btn">Save</string>
 </resources>
