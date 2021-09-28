@@ -8,23 +8,23 @@
 
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="130dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="81dp"
+        android:layout_width="141dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="22dp"
         android:text="@string/save_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingText" />
+        app:layout_constraintTop_toBottomOf="@+id/pickBtn" />
 
     <EditText
         android:id="@+id/tileText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="76dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="69dp"
+        android:layout_marginBottom="10dp"
         android:ems="10"
         android:hint="@string/title_placeholder"
         android:inputType="textPersonName"
@@ -39,7 +39,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="76dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="17dp"
         android:ems="10"
         android:hint="@string/description_placeholder"
         android:inputType="textPersonName"
@@ -54,7 +54,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="76dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="19dp"
         android:ems="10"
         android:hint="@string/comment_placeholder"
         android:inputType="textPersonName"
@@ -69,13 +69,36 @@
         android:layout_height="0dp"
         android:layout_marginStart="76dp"
         android:layout_marginEnd="76dp"
-        android:layout_marginBottom="101dp"
+        android:layout_marginBottom="6dp"
         android:ems="10"
         android:hint="@string/rating_placeholder"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/commentText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_image_24"
+        app:layout_constraintBottom_toTopOf="@+id/pickBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingText" />
+
+    <Button
+        android:id="@+id/pickBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/choose_img_btn"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

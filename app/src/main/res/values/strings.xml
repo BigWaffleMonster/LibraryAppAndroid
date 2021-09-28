@@ -11,4 +11,5 @@
     <string name="comment_placeholder">Comment</string>
     <string name="rating_placeholder">Rating (from 1 to 5)</string>
     <string name="save_btn">Save</string>
+    <string name="choose_img_btn">Pick book image</string>
 </resources>
