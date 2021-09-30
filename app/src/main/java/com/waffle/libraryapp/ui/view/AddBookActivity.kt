@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,11 +20,13 @@ import com.waffle.libraryapp.ui.viewModel.BookViewModel
 
 class AddBookActivity : AppCompatActivity() {
   private lateinit var mBookViewModel: BookViewModel
+  private lateinit var image_uri: Uri
 
   @RequiresApi(Build.VERSION_CODES.M)
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_add_book)
+
 
     val pick_btn = findViewById<Button>(R.id.pickBtn)
     val save_btn = findViewById<Button>(R.id.saveButton)
@@ -61,8 +64,9 @@ class AddBookActivity : AppCompatActivity() {
     val comment = findViewById<EditText>(R.id.commentText).text.toString()
     val rating = findViewById<EditText>(R.id.ratingText).text.toString()
 
-    val book = Book(0, title, description, comment, Integer.parseInt(rating))
+    val book = Book(0, title, description, comment, Integer.parseInt(rating), image_uri.toString())
 
+    println(book)
     mBookViewModel.addBook(book)
 
     Toast.makeText(this, "Book has been added", Toast.LENGTH_LONG).show()
@@ -89,6 +93,7 @@ class AddBookActivity : AppCompatActivity() {
     super.onActivityResult(requestCode, resultCode, data)
     if (resultCode == Activity.RESULT_OK && requestCode == IMAGE_PICK_CODE) {
       val image_view = findViewById<ImageView>(R.id.imageView)
+      image_uri = data!!.data!!
       image_view.setImageURI(data?.data)
     }
   }

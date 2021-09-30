@@ -9,7 +9,7 @@ import com.waffle.libraryapp.data.dao.UserDao
 import com.waffle.libraryapp.data.model.Book
 import com.waffle.libraryapp.data.model.User
 
-@Database(entities = [User::class, Book::class], version = 2)
+@Database(entities = [User::class, Book::class], version = 3)
 abstract class LocalDatabase: RoomDatabase() {
   abstract fun userDao(): UserDao
   abstract fun bookDao(): BookDao

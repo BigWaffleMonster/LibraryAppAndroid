@@ -1,5 +1,6 @@
 package com.waffle.libraryapp.data.model
 
+import android.net.Uri
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -11,5 +12,6 @@ data class Book(
   val book_description: String,
   val book_comment: String,
   val book_rating: Int,
+  val book_img_uri: String,
 //  val creator: User TODO: fix this
 )

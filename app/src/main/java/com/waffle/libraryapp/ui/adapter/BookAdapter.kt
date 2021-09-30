@@ -18,6 +18,7 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
     fun bind(book: Book) = with(binding) {
       bookIdTxt.text = book.book_id.toString()
       bookTitleTxt.text = book.book_title
+//      bookImgInList.setImageURI(Uri.parse(book.book_img_uri))
     }
   }
 
