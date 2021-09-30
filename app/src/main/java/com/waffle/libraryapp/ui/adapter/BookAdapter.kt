@@ -1,5 +1,6 @@
 package com.waffle.libraryapp.ui.adapter
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,9 +17,8 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
     val binding = BookViewInListBinding.bind(itemView)
 
     fun bind(book: Book) = with(binding) {
-      bookIdTxt.text = book.book_id.toString()
       bookTitleTxt.text = book.book_title
-//      bookImgInList.setImageURI(Uri.parse(book.book_img_uri))
+      bookImgInList.setImageURI(Uri.parse(book.book_img_uri))
     }
   }
 
