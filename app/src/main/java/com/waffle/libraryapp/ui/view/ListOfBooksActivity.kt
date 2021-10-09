@@ -2,9 +2,12 @@ package com.waffle.libraryapp.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
+import com.google.gson.internal.LinkedTreeMap
 import com.waffle.libraryapp.R
 import com.waffle.libraryapp.databinding.ActivityListOfBooksBinding
 import com.waffle.libraryapp.databinding.BookViewInListBinding

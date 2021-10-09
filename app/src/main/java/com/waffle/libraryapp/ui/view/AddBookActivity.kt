@@ -40,6 +40,8 @@ class AddBookActivity : AppCompatActivity() {
     save_btn.setOnClickListener {
       saveBook()
     }
+
+
   }
 
   @RequiresApi(Build.VERSION_CODES.M)
@@ -61,10 +63,9 @@ class AddBookActivity : AppCompatActivity() {
   private fun saveBook() {
     val title = findViewById<EditText>(R.id.tileText).text.toString()
     val description = findViewById<EditText>(R.id.descriptionText).text.toString()
-    val comment = findViewById<EditText>(R.id.commentText).text.toString()
     val rating = findViewById<EditText>(R.id.ratingText).text.toString()
 
-    val book = Book(0, title, description, comment, Integer.parseInt(rating), image_uri.toString())
+    val book = Book(0, title, description, Integer.parseInt(rating), image_uri.toString())
 
     println(book)
     mBookViewModel.addBook(book)
@@ -97,6 +98,7 @@ class AddBookActivity : AppCompatActivity() {
       image_view.setImageURI(data?.data)
     }
   }
+
 
   companion object {
     private val IMAGE_PICK_CODE = 1000

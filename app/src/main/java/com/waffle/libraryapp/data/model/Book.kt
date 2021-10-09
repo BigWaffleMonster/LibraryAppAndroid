@@ -10,7 +10,6 @@ data class Book(
   val book_id: Int,
   val book_title: String,
   val book_description: String,
-  val book_comment: String,
   val book_rating: Int,
   val book_img_uri: String,
 //  val creator: User TODO: fix this

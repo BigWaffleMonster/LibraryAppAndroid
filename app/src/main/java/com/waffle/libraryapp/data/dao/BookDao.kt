@@ -9,7 +9,7 @@ import com.waffle.libraryapp.data.model.Book
 
 @Dao
 interface BookDao {
-  @Insert(onConflict = OnConflictStrategy.IGNORE)
+  @Insert(onConflict = OnConflictStrategy.REPLACE)
   fun addBook(book: Book)
 
   @Query("SELECT * FROM book_table ORDER BY book_id ASC")

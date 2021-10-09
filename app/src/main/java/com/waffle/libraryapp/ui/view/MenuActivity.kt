@@ -13,6 +13,7 @@ class MenuActivity : AppCompatActivity() {
 
     val all_books_btn = findViewById<Button>(R.id.all_books_btn)
     val add_book_menu_btn = findViewById<Button>(R.id.add_book_menu_btn)
+    val get_bool_from_api = findViewById<Button>(R.id.get_book_api)
 
     all_books_btn.setOnClickListener {
       val intent = Intent(this, ListOfBooksActivity::class.java)
@@ -21,6 +22,11 @@ class MenuActivity : AppCompatActivity() {
 
     add_book_menu_btn.setOnClickListener {
       val intent = Intent(this, AddBookActivity::class.java)
+      startActivity(intent)
+    }
+
+    get_bool_from_api.setOnClickListener{
+      val intent = Intent(this, BookApiActivity::class.java)
       startActivity(intent)
     }
   }
